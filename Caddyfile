@@ -1,0 +1,28 @@
+0.0.0.0:7070 {
+    log /root/7070.log
+    tls off
+    gzip
+    filemanager {
+        database /root/.filemanager.db
+    }
+}
+
+0.0.0.0:7777 {
+    root /root/upload
+    log /root/7777.log
+    tls off
+    gzip
+    upload /upload {
+        to "/root/upload/files"
+        yes_without_tls
+    }
+}
+
+0.0.0.0:7080 {
+    root /root/upload/files
+    log /root/7080.log
+    tls off
+    gzip
+    basicauth / upload upload
+    browse
+}
