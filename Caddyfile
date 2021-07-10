@@ -8,21 +8,21 @@
 }
 
 0.0.0.0:7777 {
-    root /root/upload
+    root /root/files/public
     log /root/7777.log
     tls off
     gzip
-    upload /upload {
-        to "/root/upload/files"
+    upload /files {
+        to "/root/files/public/files"
         yes_without_tls
     }
 }
 
 0.0.0.0:7080 {
-    root /root/upload/files
+    root /root/files/public/files
     log /root/7080.log
     tls off
     gzip
-    basicauth / upload upload
+    basicauth / guest guest@OMO
     browse
 }
