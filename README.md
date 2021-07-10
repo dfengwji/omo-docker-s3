@@ -52,7 +52,8 @@ $ wget your-domain:7777/files/myfile
 
 ## 页面浏览公共区域文件
 
-7080端口提供公共区域的页面浏览，默认账号和密码为guest
+7080端口提供公共区域的页面浏览，默认账号和密码为 
+guest  guest@OMO
 
 
 
