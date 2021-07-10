@@ -1,6 +1,7 @@
 # Usage
 
 ```bash
+~# mkdir -p /data/omo-s3/files/public/files
 ~# docker run --restart=always --name=omo-s3 -p 7070:7070 -p 7777:7777 -p 7080:7080 -v /data/omo-s3/files:/root/files -d xtechcloud/omo-s3
 ```
 
